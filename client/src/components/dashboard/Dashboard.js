@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from "react-bootstrap/Button"
+import Container from "react-bootstrap/Container"
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -13,7 +16,7 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div className="">
+      <Container>
         <div className="">
           <div className="landing-copy">
             <h4>
@@ -22,15 +25,12 @@ class Dashboard extends Component {
                 You're logged in!
               </p>
             </h4>
-            <button
-              onClick={this.onLogoutClick}
-              className=""
-            >
-              Logout
-            </button>
+            <Button variant="info"
+            onClick={this.onLogoutClick} className="btn btn-lg logout">Logout
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }
