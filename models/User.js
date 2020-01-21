@@ -11,6 +11,10 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
+  telephone: {
+    type: String,
+    required: true
+  },
   password: {
     type: String,
     required: true
@@ -18,10 +22,6 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  },
-  phone: {
-    type: String,
-    required: false
   },
   owner_id: {
     type: String,
