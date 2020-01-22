@@ -9,14 +9,14 @@ import "./nav.css"
 
 function Navigation() {
   return (
-    <Navbar bg="warning" expand="lg">
-      <img className=""  src={require('../../images/logo.svg')} alt="dawn pic"></img>
+    <Navbar bg="secondary" expand="lg">
+      <img className="pic" src={require('../../images/logo.svg')} alt="dawn pic" />
   <Navbar.Brand href="/">Get Lost</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
+  <Navbar.Collapse id="basic-navbar-nav mr-auto">
   <Nav className="ml-auto">
-      <Nav.Link href="/register">Register</Nav.Link>
-      <Nav.Link href="/login">Log In</Nav.Link>
+      <Nav.Link className="navItem" href="/register">Register</Nav.Link>
+      <Nav.Link className="navItem" href="/login">Log In</Nav.Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>
