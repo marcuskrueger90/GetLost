@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 class Landing extends Component {
   render() {
@@ -15,22 +15,12 @@ class Landing extends Component {
               passport and JWTs
             </p>
             <br />
-            <div className="">
-              <Link
-                to="/register"
-                className=""
-              >
-                Register
-              </Link>
+            {/* <div className="">
+              <Link to="/register"className="">Register</Link>
             </div>
             <div className="">
-              <Link
-                to="/login"
-                className=""
-              >
-                Log In
-              </Link>
-            </div>
+              <Link to="/login" className="">Log In</Link>
+    </div> */}
           </div>
         </div>
       </div>
