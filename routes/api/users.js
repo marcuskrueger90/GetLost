@@ -106,4 +106,15 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.post('/trips', (req, res)=>{
+
+  
+  res.json({
+    msg: 'trip has been planned!'
+  });
+})
+
+
+
+
 module.exports = router;
