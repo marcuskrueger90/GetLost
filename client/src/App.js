@@ -13,7 +13,6 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-import Cronjobfunc from "./components/Cronfunction";
 
 import "./App.css";
 
@@ -38,7 +37,6 @@ if (localStorage.jwtToken) {
 }
 class App extends Component {
   render() {
-    Cronjobfunc();
     return (
       <Provider store={store}>
         <Router>
