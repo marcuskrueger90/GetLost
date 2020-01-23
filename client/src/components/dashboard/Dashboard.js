@@ -8,6 +8,9 @@ import Container from "react-bootstrap/Container"
 import Alert from "react-bootstrap/Alert"
 import Form from "react-bootstrap/Form";
 import "./dash.css";
+import axios from "axios";
+
+
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -15,8 +18,66 @@ class Dashboard extends Component {
     this.props.logoutUser();
   };
 
+  
+  state={
+    telephone:'',
+    date:'',
+    trip:[
+      {location:[
+        {address:'',
+        city:'',
+        state:'',
+        zip:''
+        }]
+      }
+    ],
+    tripEndDateTime:'',
+    pin:'',
+  }
+
+  
+
+  handleChange=(event)=>{
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
+    
+    this.setState({
+      [name]: value
+    })
+  }
+  submit = (event)=>{
+
+    event.preventDefault();
+
+    const payload = {
+        telephoe: this.state.telephone,
+        date: this.state.date,
+        state: this.state.trip.location.state,
+        zip: this.state.trip.location.zip,
+        address: this.state.trip.location.address,
+        tripEndDateTime: this.state.tripEndDateTime,
+        pin: this.state.pin
+
+    }
+
+    axios({
+        url: '/api/trips',
+        method: "POST",
+        data: payload
+
+    })
+    .then(()=>{
+        console.log('Data has been sent to the server');
+    })
+    .catch(()=>{
+        console.log('Internal server error')
+    })
+}
+  
+
   render() {
-    const { user } = this.props.auth;
+    
 
     return (
       <Container className="pt-3">
@@ -31,27 +92,56 @@ class Dashboard extends Component {
           <br />
           <Form>
             <Form.Group className="px-1">
-            <Form.Control type="address" placeholder="Address" />
+            <Form.Control 
+            type="address"
+            name="address" 
+            placeholder="Address"
+            onChange={this.handleChange}/>
             </Form.Group>
 
             <Form.Group className="px-1">
-            <Form.Control type="city" placeholder="City" />
+            <Form.Control 
+            type="city"
+            name="city"
+            placeholder="City"
+            onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group className="px-1">
-            <Form.Control type="state" placeholder="State" />
+            <Form.Control 
+            type="state" 
+            name="state"
+            placeholder="State"
+            
+            onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group className="px-1">
-            <Form.Control type="zipcode" placeholder="Zipcode" />
+            <Form.Control 
+            type="zipcode" 
+            name="zip"
+            placeholder="Zipcode"
+            
+            onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group className="px-1">
-            <Form.Control type="arrival" placeholder="Expected Arrival" />
+            <Form.Control 
+            type="arrival" 
+            name="tripEndDateTime"
+            placeholder="Expected Arrival"
+            
+            onChange={this.handleChange}
+            />
             </Form.Group>
 
             <Form.Group className="px-1">
-            <Form.Control type="PIN" placeholder="PIN code" />
+            <Form.Control 
+            type="PIN" 
+            name="pin"
+            placeholder="PIN code"
+            
+            onChange={this.handleChange} />
             </Form.Group>
             </Form>
 

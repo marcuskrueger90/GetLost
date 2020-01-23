@@ -107,4 +107,25 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.post('/api/trips', (req, res)=>{
+  const data = req.body;
+
+  newUser.save((error)=>{
+  if(error){
+    res.status(500).json({msg: 'Sorry, internal server error'})
+
+  }else{
+    res.json({
+      msg: 'trip has been planned!'
+    });
+  }
+  
+  
+ 
+})
+})
+
+
+
+
 module.exports = router;
