@@ -5,6 +5,7 @@ const passport = require("passport");
 const path = require('path');
 
 const users = require("./routes/api/users");
+const Cronjobfunc = require("./services/Cronfunction");
 
 const app = express();
 
@@ -55,3 +56,6 @@ if(process.env.NODE_ENV === 'production'){
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
+
+// Initiate cron job to run on server for as long as it's running
+Cronjobfunc();
