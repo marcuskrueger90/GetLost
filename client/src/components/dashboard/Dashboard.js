@@ -69,7 +69,6 @@ class Dashboard extends Component {
             </Form>
 
             <Button className="btn btn-warning">Submit</Button>
-            <Button variant="dark" onClick={this.onLogoutClick} className="btn logout">Logout</Button>
 
         </div>
       </Container>
