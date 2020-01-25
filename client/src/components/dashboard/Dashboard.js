@@ -18,6 +18,8 @@ class Dashboard extends Component {
   };
 
   
+
+  
   state={
     telephone:'',
     date:'',
@@ -76,7 +78,7 @@ class Dashboard extends Component {
   
 
   render() {
-    
+    const { user } = this.props.auth;
 
     return (
       <>
