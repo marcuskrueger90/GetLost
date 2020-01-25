@@ -11,12 +11,15 @@
     "concurrently": "^5.0.2",
     "cron": "^1.8.1",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.7",
+    "nexmo": "^2.6.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-particles-js": "^2.7.0",
     "validator": "^12.1.0"
   },
   "devDependencies": {

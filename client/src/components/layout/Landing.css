@@ -1,0 +1,29 @@
+.background-sky {
+    position: fixed;
+    background: url('../../images/sky.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.background-mountain {
+    position: fixed;
+    top: .2px;
+    background-image: url('../../images/ground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+/* @media only screen and (max-width: 1115px) {
+    .background-mountain {
+        background-size: 1120px;
+    }
+    .background-sky {
+        background-size: 1120px;
+    }
+} */
