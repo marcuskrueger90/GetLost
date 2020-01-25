@@ -25,11 +25,13 @@ if (process.env.NODE_ENV === "production") {
 // DB Config
 const db = require("./config/keys").mongoURI;
 
+// mLab connection URI for reference: "mongodb://user:password1@ds263448.mlab.com:63448/heroku_sl2zt1hp"
+
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://user:password1@ds263448.mlab.com:63448/heroku_sl2zt1hp")
-    // db,
-    // { useNewUrlParser: true, useUnifiedTopology: true }
+  .connect(process.env.MONGODB_URI || 
+    db,
+    { useNewUrlParser: true, useUnifiedTopology: true })
   
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
