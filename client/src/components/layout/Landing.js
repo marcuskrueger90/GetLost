@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./Landing.css"
+// import "./Landing.css"
 import Particles from 'react-particles-js';
 
 import { Link } from "react-router-dom";
 import { Card, Container} from "react-bootstrap"
-// import "./landing.css"
+import "./landing.css"
 
 
 class Landing extends Component {
@@ -56,7 +56,7 @@ class Landing extends Component {
               <Link to="/login" className="">Log In</Link>
     </div> */}
 
-<div className="landing">
+      <div className="landing">
       <Container className="welcome" sm={12}>
       <Card style={{position: 'relative', zIndex:3}} sm={12}>
       <Card.Body className="card-content">
@@ -64,7 +64,7 @@ class Landing extends Component {
         <br/>
         <Link to="/register"className="">Plan trip (if logged in)</Link>
         <br/>
-        <Link to="/login" className="">Log In</Link>
+        <Link to="/login" className="">Login</Link>
 
       </Card.Body>
       </Card>

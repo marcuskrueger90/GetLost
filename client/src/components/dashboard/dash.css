@@ -3,6 +3,8 @@
 }
 
 .btn {
-    /* background: linear-gradient(185deg, rgba(99,99,99,1) 0%, rgba(162,171,88,1) 100%); */
-    border-radius: 0;
+    background-color: rgb(221, 90, 57);
+    border: none;
+    border-radius: 20px;
+
 }
