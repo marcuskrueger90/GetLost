@@ -4,4 +4,13 @@
 
 .navItem {
     text-align: right;
+    color: white;
+}
+
+/* .navy {
+    background: radial-gradient(circle, rgba(82,194,52,1) 0%, rgba(103,70,18,1) 100%);
+} */
+
+.toggler {
+    border: none;
 }
