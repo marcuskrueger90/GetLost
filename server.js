@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require('path');
 
+
 const users = require("./routes/api/users");
 const Cronjobfunc = require("./services/Cronfunction");
 
@@ -32,6 +33,9 @@ mongoose
   
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
+  app.use(express.json());
+  app.use(express.urlencoded({extended: false}))
+
 
 // Passport middleware
 app.use(passport.initialize());
