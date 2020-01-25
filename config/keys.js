@@ -4,6 +4,6 @@ dotenv.config();
 
 module.exports = {
   mongoURI: "mongodb://localhost:27017/userdb",
-  secretOrKey: "Something1!",
+  secretOrKey: "S0cc3rM4n!69",
   noonlightToken: process.env.NOONLIGHT_TOKEN
 };

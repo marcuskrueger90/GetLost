@@ -23,17 +23,13 @@ class Dashboard extends Component {
   state={
     telephone:'',
     date:'',
-    trip:[
-      {location:[
-        {address:'',
-        city:'',
-        state:'',
-        zip:''
-        }]
-      }
-    ],
-    tripEndDateTime:'',
-    pin:'',
+    address:'',
+    city:'',
+    state:'',
+    zip:'',
+    tripEndDateTime:''
+    
+    
   }
 
   
@@ -42,6 +38,7 @@ class Dashboard extends Component {
     const target = event.target;
     const name = target.name;
     const value = target.value;
+    
     
     this.setState({
       [name]: value
@@ -52,18 +49,19 @@ class Dashboard extends Component {
     event.preventDefault();
 
     const payload = {
-        telephoe: this.state.telephone,
-        date: this.state.date,
-        state: this.state.trip.location.state,
-        zip: this.state.trip.location.zip,
-        address: this.state.trip.location.address,
+        
+        city: this.state.city,
+        state: this.state.state,
+        zip: this.state.zip,
+        address: this.state.address,
         tripEndDateTime: this.state.tripEndDateTime,
-        pin: this.state.pin
+      
 
     }
 
     axios({
-        url: '/api/trips',
+        // url: '/api/trips',
+        url: `/api/users/trips/${this.state.userid}`,
         method: "POST",
         data: payload
 
@@ -76,7 +74,10 @@ class Dashboard extends Component {
     })
 }
   
+componentDidMount(){
 
+  this.setState({userid: this.props.auth.user.id})
+}
   render() {
     const { user } = this.props.auth;
 
@@ -159,7 +160,7 @@ class Dashboard extends Component {
             </Form.Group>
             </Form>
 
-            <Button className="btn btn-warning">Submit</Button>
+            <Button onClick={this.submit} className="btn btn-warning">Submit</Button>
 
         </div>
       </Container>

@@ -27,7 +27,7 @@ const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://user:password1@ds263448.mlab.com:63448/heroku_sl2zt1hp")
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost/userdb', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify:false })
     // db,
     // { useNewUrlParser: true, useUnifiedTopology: true }
   

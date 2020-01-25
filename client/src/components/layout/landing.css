@@ -27,24 +27,3 @@
         background-size: 1120px;
     }
 } */
-
-
- .welcome {
-    padding-top: 15rem;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    .welcome {
-        padding-top: 7em;
-    }
-
-.landing-img {
-    height: 100vh;
-    width: 100%;
-
-}
-
-
-}

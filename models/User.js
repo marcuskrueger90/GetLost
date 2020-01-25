@@ -23,19 +23,8 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  owner_id: {
-    type: String,
-    required: false
-  },
-  user_id: {
-    type: Schema.ObjectId,
-    auto: true,
-    required: true
-  },
-  trip: {
-    location: [
-      {
-        address: {
+  
+        line1: {
           type: String
         },
         city: {
@@ -46,25 +35,33 @@ const UserSchema = new Schema({
         },
         zip: {
           type: String
+        },
+        tripEndDateTime: {
+          type: Date
         }
-      }
-    ],
+        
+      
+    });
 
-    tripEndDateTime: {
-      type: Date
-    },
-    pin: {
-      type: Number
-    },
-    alarmDispatched: {
-      type: Boolean,
-      default: false
-    },
-    alarm_id: {
-      type: String
-    }
-  }
-});
+  // trip: {
+  //   location: 
+  //     {
+  //       address: {
+  //         type: String
+  //       },
+  //       city: {
+  //         type: String
+  //       },
+  //       state: {
+  //         type: String
+  //       },
+  //       zip: {
+  //         type: String
+  //       }
+  //     } ,
+
+   
+
 
 module.exports = User = mongoose.model("users", UserSchema);
 

@@ -16,6 +16,8 @@ const User = require("../../models/User");
 // @desc Register user
 // @access Public
 router.post("/register", (req, res) => {
+
+  console.log("hit register in users")
   // Form validation
 
   const { errors, isValid } = validateRegisterInput(req.body);
@@ -107,10 +109,12 @@ router.post("/login", (req, res) => {
   });
 });
 
-router.post('/api/trips', (req, res)=>{
+router.post('/trips/:id', (req, res)=>{
+  
   const data = req.body;
+  console.log(req.params.id , 'userid')
 
-  newUser.save((error)=>{
+  User.findOneAndUpdate({"_id": req.params.id }, data, (error)=>{
   if(error){
     res.status(500).json({msg: 'Sorry, internal server error'})
 
