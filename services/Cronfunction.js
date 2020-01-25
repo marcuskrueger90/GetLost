@@ -1,12 +1,16 @@
 const CronJob = require('cron').CronJob;
 const noonlight = require('./noonlight');
+const rollCall = require('./rollCall');
 
 const Cronjobfunc = () => {
   console.log('Starting cron job to run Noonlight and other functions.');
-  const job = new CronJob('0 */60 * * * *', function() {
+  const job = new CronJob('0 */10 * * * *', function() {
     const d = new Date();
-    console.log('Every 60 minutes - Cron last ran:', d);
-    //PUT FUNCTIONS HERE TO RUN IN CRON EVERY 60 MINUTES (changed to 60 minutes to test Heroku's timeout)
+    console.log('Every 10 minutes - Cron last ran:', d);
+    //PUT FUNCTIONS HERE TO RUN IN CRON EVERY 10 MINUTES (changed to 10 minutes to test Heroku's timeout)
+
+    // @TODO finish rollCall service so that it's the only function to call here
+    // rollCall.userRollCall();
 
     // @TODO replace alarmInfo with dynamic data
     const alarmInfo = {
@@ -25,7 +29,7 @@ const Cronjobfunc = () => {
 
     noonlight.dispatchAlarm(alarmInfo);
   });
-  console.log('Start success. Cron runs every two mintes.');
+  console.log('Start success. Cron runs every ten mintes.');
   job.start();
   };
 
