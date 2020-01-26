@@ -89,8 +89,11 @@ componentDidMount(){
       <Navbar.Toggle className="toggler" aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav mr-auto">
       <Nav className="ml-auto">
-      <b>Hey there,</b> {user.name.split(" ")[0]}!
-      <Button variant="info" onClick={this.onLogoutClick} className="btn btn-lg logout">Logout</Button>
+      <Navbar.Text className="user">
+        Welcome, <b>{user.name.split(" ")[0]}</b>!
+      </Navbar.Text>
+      <br />
+      <Button variant="outline-light" onClick={this.onLogoutClick} className="btn logout">Logout</Button>
       {/* <Nav.Link className="navItem" href="/register">Register</Nav.Link>
       <Nav.Link className="navItem" href="/login">Log In</Nav.Link> */}
     </Nav>

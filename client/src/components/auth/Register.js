@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import Particles from 'react-particles-js';
+import "./register.css"
+import { Card, Form, Button, Row } from "react-bootstrap";
+
 
 class Register extends Component {
   constructor() {
@@ -55,23 +59,57 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="">
-        <div className="">
-          <div className="">
-            <Link to="/" className="">
-              Back to home
-            </Link>
-            <div className="">
+        <>
+        <div className="background-sky">
+        <Particles
+            params={{
+              "particles": {
+                  "number": {
+                      "value": 200,
+                      "density": {
+                          "enable": true,
+                          "value_area": 1500
+                      }
+                  },
+                  "line_linked": {
+                      "enable": true,
+                      "opacity": 0.02
+                  },
+                  "move": {
+                      "direction": "right",
+                      "speed": 0.08
+                },
+                "color": {
+                    "value": "#fff"
+                },
+                  "size": {
+                      "value": 1.5
+                  },
+                  "opacity": {
+                      "anim": {
+                          "enable": true,
+                          "speed": .2,
+                          "opacity_min": 0.05
+                      }
+                  }
+              },
+              "retina_detect": true
+          }} />
+          </div>
+          <div className="background-mountain">
+            <Card className="text-center bckgrnd w-50 mx-auto mt-4 regg">
               <h4>
-                <b>Register</b> below
+                Register below
               </h4>
               <p className="">
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field">
-                <input
+              </Card>
+
+            <Form className="text-center mx-auto mt-5" noValidate onSubmit={this.onSubmit}>
+
+              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Control placeholder="Name"
                   onChange={this.onChange}
                   value={this.state.name}
                   error={errors.name}
@@ -79,13 +117,14 @@ class Register extends Component {
                   type="text"
                   className={classnames("", {
                     invalid: errors.name
-                  })}
-                />
-                <label htmlFor="name">Name</label>
-                <span className="">{errors.name}</span>
-              </div>
-              <div className="input-field">
-                <input
+                  })}/>
+                  <label htmlFor="name"></label>
+                  <span className="">{errors.name}</span>
+              </Form.Group>
+
+              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Control 
+                  placeholder="Email"
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}
@@ -93,13 +132,14 @@ class Register extends Component {
                   type="email"
                   className={classnames("", {
                     invalid: errors.email
-                  })}
-                />
-                <label htmlFor="email">Email</label>
+                  })}/>
+                   <label htmlFor="email"></label>
                 <span className="">{errors.email}</span>
-              </div>
-              <div className="input-field">
-                <input
+              </Form.Group>
+
+              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Control 
+                  placeholder="Phone #"
                   onChange={this.onChange}
                   value={this.state.telephone}
                   error={errors.telephone}
@@ -107,27 +147,30 @@ class Register extends Component {
                   type="text"
                   className={classnames("", {
                     invalid: errors.telephone
-                  })}
-                />
-                <label htmlFor="number">Phone Number</label>
+                  })}/>
+                   <label htmlFor="number"></label>
                 <span className="">{errors.telephone}</span>
-              </div>
-              <div className="input-field">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password
-                  })}
-                />
-                <label htmlFor="password">Password</label>
+              </Form.Group>
+
+
+              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Control 
+                 placeholder="Password"
+                 onChange={this.onChange}
+                 value={this.state.password}
+                 error={errors.password}
+                 id="password"
+                 type="password"
+                 className={classnames("", {
+                   invalid: errors.password
+                 })}/>
+                    <label htmlFor="password"></label>
                 <span className="">{errors.password}</span>
-              </div>
-              <div className="input-field">
-                <input
+              </Form.Group>
+
+              <Form.Group className="w-50 mx-auto mt-0">
+              <Form.Control 
+                placeholder="Confirm Password"
                   onChange={this.onChange}
                   value={this.state.password2}
                   error={errors.password2}
@@ -135,23 +178,27 @@ class Register extends Component {
                   type="password"
                   className={classnames("", {
                     invalid: errors.password2
-                  })}
-                />
-                <label htmlFor="password2">Confirm Password</label>
+                  })}/>
+                    <label htmlFor="password2"></label>
                 <span className="">{errors.password2}</span>
-              </div>
-              <div className="">
-                <button
+              </Form.Group>
+
+                <Button style={{color: "white"}} variant="outline-dark"
                   type="submit"
-                  className=""
-                >
+                  className="regBtn">
                   Sign up
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+                </Button>
+            </Form>
+
+            <Row className="justify-content-md-center mt-5">
+            <div>
+            <Button href="/" className="regBtn">
+                 Back to home
+                </Button>
+            </div>
+            </Row>
+            </div>
+            </>
     );
   }
 }
@@ -171,3 +218,9 @@ export default connect(
   mapStateToProps,
   { registerUser }
 )(withRouter(Register));
+
+
+
+
+
+

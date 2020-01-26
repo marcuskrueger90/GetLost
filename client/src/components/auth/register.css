@@ -19,35 +19,22 @@
     z-index: 2;
 }
 
-/* @media only screen and (max-width: 1115px) {
-    .background-mountain {
-        background-size: 1120px;
-    }
-    .background-sky {
-        background-size: 1120px;
-    }
-} */
 
-.user {
-    padding-right: 1rem;
+.bckgrnd {
+    background: rgba(0, 0, 0, 0.4)!important;
 }
 
- .welcome {
-    padding-top: 15rem;
+.regBtn {
+    margin-top: -1rem;
 }
 
+.regBtn:hover {
+    background: rgb(75, 87, 123)!important;
+}
 
-
-@media only screen and (max-width: 600px) {
-    .welcome {
-        padding-top: 7em;
-    }
-
-.landing-img {
-    height: 100vh;
-    width: 100%;
-
+.regg {
+    padding-top: 1rem;
+    color: white;
 }
 
 
-}
