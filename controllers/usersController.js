@@ -1,47 +1,81 @@
 // Load User model
-const User = require("../models/User");
+const db = require("../models");
+var moment = require("moment");
 
-// Defining methods for the booksController
+// Defining methods for the usersController
 module.exports = {
-//   findAll: function(req, res) {
-//     db.Book
-//       .find(req.query)
-//       .sort({ date: -1 })
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
-//   findById: function(req, res) {
-//     db.Book
-//       .findById(req.params.id)
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
-//   create: function(req, res) {
-//     db.Book
-//       .create(req.body)
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
-//   update: function(req, res) {
-//     db.Book
-//       .findOneAndUpdate({ _id: req.params.id }, req.body)
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
-//   remove: function(req, res) {
-//     db.Book
-//       .findById({ _id: req.params.id })
-//       .then(dbModel => dbModel.remove())
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   },
-  doesTripExist: function(req, res) {
-    // @TODO check whether trip.tripEndDateTime && trip.Location is null
+  // return all users in db
+  findAll: async () => {
+    try {
+      const results = await db.User.find({});
+      return results;
+    } catch (err) {
+      throw err;
+    }
   },
-  triphasEnded: function(req, res) {
-    // @TODO check whether trip.tripEndDateTime is in the past
+  // Check whether all trip info is present in a user's db record
+  doesTripExist: user => {
+    let isTripPresent = false;
+
+    if (
+      user.address &&
+      user.city &&
+      user.state &&
+      user.zip &&
+      user.tripEndDateTime
+    ) {
+      isTripPresent = true;
+    }
+    return isTripPresent;
   },
-  clearUserTrip: function(req, res) {
-    // @TODO remove user's trip.Location and trip.tripEndDateTime
+  // Check whether a user's scheduled return date/time is in the past
+  isItPastScheduledReturn: user => {
+    let isReturnTimePast = false;
+
+    if (moment().isSameOrAfter(user.tripEndDateTime, "minute")) {
+      isReturnTimePast = true;
+    }
+    console.log("    Checking return date/time for user:                       " + user.name)
+    console.log("    The current date/time is:                                 " + moment(new Date()).format("MM-DD-YYYY HH:mm A"));
+    console.log("    The user's scheduled return date/time is:                 " + moment(user.tripEndDateTime, "YYYY-MM-DD HH:mm:ss.SZ").format("MM-DD-YYYY HH:mm A"));
+    console.log("    Has the user not checked in by the specified date/time?   " + isReturnTimePast);
+    return isReturnTimePast;
+  },
+  // Take in a user and return an object of alarmInfo to use for a POST createAlarm request
+  gatherAlarmInfo: user => {
+    const alarmInfo = {
+      name: user.name,
+      phone: user.telephone,
+      location: {
+        address: {
+          line1: user.address,
+          city: user.city,
+          state: user.state,
+          zip: user.zip
+        }
+      }
+    };
+
+    return alarmInfo;
+  },
+  // Nullify all trip-related info from a user's db record
+  clearUserTrip: async user => {
+    try {
+      const results = await db.User.findOneAndUpdate(
+        { _id: user._id },
+        {
+          $set: {
+            address: null,
+            city: null,
+            state: null,
+            zip: null,
+            tripEndDateTime: null
+          }
+        }
+      );
+      return results;
+    } catch (err) {
+      throw err;
+    }
   }
 };
