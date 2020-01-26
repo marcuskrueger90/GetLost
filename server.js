@@ -29,14 +29,12 @@ const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGODB_URI || 
-    db,
-    { useNewUrlParser: true, useUnifiedTopology: true })
-  
+  .connect(process.env.MONGODB_URI || db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
-  app.use(express.json());
-  app.use(express.urlencoded({extended: false}))
+
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
 
 
 // Passport middleware
