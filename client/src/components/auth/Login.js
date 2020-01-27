@@ -105,7 +105,7 @@ class Login extends Component {
               </p>
               </Card>
             <Card className="bckgrnd w-50 mx-auto mt-4 regg">
-            <Form className="text-center mx-2 mt-5" noValidate onSubmit={this.onSubmit}>
+            <Form className="text-center mx-2 mt-2" noValidate onSubmit={this.onSubmit}>
 
             <Form.Group className="">
               <Form.Control 
