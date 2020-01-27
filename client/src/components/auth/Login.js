@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import Particles from 'react-particles-js';
-import { Card, Form, Button, Row } from "react-bootstrap";
+import { Card, Form, Button } from "react-bootstrap";
 import "./login.css"
 
 

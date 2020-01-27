@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Particles from 'react-particles-js';
 
 import { Link } from "react-router-dom";
-import { Card, Container, Row, Col, Button, Carousel, OverlayTrigger, Popover, ButtonToolbar } from "react-bootstrap";
+import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
 // import { Popper } from 'react-popper';
 import "./landing.css";
 
