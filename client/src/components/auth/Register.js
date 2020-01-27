@@ -105,10 +105,10 @@ class Register extends Component {
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
               </Card>
+              <Card className="bckgrnd w-50 mx-auto mt-4 regg">
+            <Form className="text-center mx-2 mt-3" noValidate onSubmit={this.onSubmit}>
 
-            <Form className="text-center mx-auto mt-5" noValidate onSubmit={this.onSubmit}>
-
-              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Group className="mb-0">
               <Form.Control placeholder="Name"
                   onChange={this.onChange}
                   value={this.state.name}
@@ -122,7 +122,7 @@ class Register extends Component {
                   <span className="">{errors.name}</span>
               </Form.Group>
 
-              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Group className="mb-0">
               <Form.Control 
                   placeholder="Email"
                   onChange={this.onChange}
@@ -137,7 +137,7 @@ class Register extends Component {
                 <span className="">{errors.email}</span>
               </Form.Group>
 
-              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Group className="mb-0">
               <Form.Control 
                   placeholder="Phone #"
                   onChange={this.onChange}
@@ -153,7 +153,7 @@ class Register extends Component {
               </Form.Group>
 
 
-              <Form.Group className="w-50 mx-auto mb-0">
+              <Form.Group className="mb-0">
               <Form.Control 
                  placeholder="Password"
                  onChange={this.onChange}
@@ -168,7 +168,7 @@ class Register extends Component {
                 <span className="">{errors.password}</span>
               </Form.Group>
 
-              <Form.Group className="w-50 mx-auto mt-0">
+              <Form.Group className="mb-3">
               <Form.Control 
                 placeholder="Confirm Password"
                   onChange={this.onChange}
@@ -184,19 +184,16 @@ class Register extends Component {
               </Form.Group>
 
                 <Button style={{color: "white"}} variant="outline-dark"
+                  block
                   type="submit"
                   className="regBtn">
                   Sign up
                 </Button>
-            </Form>
-
-            <Row className="justify-content-md-center mt-5">
-            <div>
-            <Button href="/" className="regBtn">
+                <Button href="/" className="regBtn my-3" block>
                  Back to home
                 </Button>
-            </div>
-            </Row>
+            </Form>
+            </Card>
             </div>
             </>
     );
