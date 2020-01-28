@@ -48,6 +48,7 @@ class Dashboard extends Component {
       tripEndDateTime: this.state.tripEndDateTime
     };
 
+
     axios({
       url: `/api/users/trips/${this.state.userid}`,
       method: "POST",
@@ -60,6 +61,32 @@ class Dashboard extends Component {
         console.log("Internal server error");
       });
   };
+
+
+  cancel = event => {
+    event.preventDefault();
+
+    const payload2 = {
+      city: null,
+      state: null,
+      zip: null,
+      address: null,
+      tripEndDateTime: null
+    };
+
+    axios({
+      url: `/api/users/trips/${this.state.userid}`,
+      method: "POST",
+      data: payload2
+    })
+      .then(() => {
+        console.log("Data has been sent to the server");
+      })
+      .catch(() => {
+        console.log("Internal server error");
+      });
+    };
+
 
   componentDidMount() {
     this.setState({ userid: this.props.auth.user.id });
@@ -103,7 +130,10 @@ class Dashboard extends Component {
             <h4>Current Trip: </h4>
             <h5>(Alarm Dispatch Location)</h5>
             <h5>(Expected Arrival Time)</h5>
-            <Alert variant="danger">Arrived Safe - Cancel Alarm</Alert>
+            
+            <Button variant="danger"
+onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
+ </Button>
             <hr />
 
             <h4>New Alarm (Location and Time)</h4>
