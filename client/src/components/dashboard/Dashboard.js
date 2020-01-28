@@ -5,7 +5,6 @@ import { logoutUser } from "../../actions/authActions";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Container, Alert, Form, Navbar, Nav} from "react-bootstrap"
 import "./dash.css";
-// import Navigation from "../layout/Navbar"
 import axios from "axios";
 
 
@@ -189,16 +188,3 @@ export default connect(
 
 
 
-
-
-// <div className="landing-copy">
-// <h4 className>
-//   <b>Hey there,</b> {user.name.split(" ")[0]}!
-//   <p className="">
-//     You're logged in!
-//   </p>
-// </h4>
-// <Button variant="info"
-// onClick={this.onLogoutClick} className="btn btn-lg logout">Logout
-// </Button>
-// </div>
