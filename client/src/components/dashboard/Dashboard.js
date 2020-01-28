@@ -8,7 +8,6 @@ import { Button, Container, Alert, Form, Navbar, Nav } from "react-bootstrap";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import "./dash.css";
-// import Navigation from "../layout/Navbar"
 import axios from "axios";
 
 class Dashboard extends Component {
@@ -155,12 +154,9 @@ class Dashboard extends Component {
                 />
               </Form.Group>
             </Form>
-
-            <Button onClick={this.submit} className="btn btn-warning">
-              Submit
-            </Button>
-          </div>
-        </Container>
+            <Button onClick={this.submit} className="btn btn-warning mb-3">Submit</Button>
+        </div>
+      </Container>
       </>
     );
   }
@@ -175,16 +171,13 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Dashboard);
+
+
+
+
 export default connect(mapStateToProps, { logoutUser })(Dashboard);
 
-// <div className="landing-copy">
-// <h4 className>
-//   <b>Hey there,</b> {user.name.split(" ")[0]}!
-//   <p className="">
-//     You're logged in!
-//   </p>
-// </h4>
-// <Button variant="info"
-// onClick={this.onLogoutClick} className="btn btn-lg logout">Logout
-// </Button>
-// </div>
