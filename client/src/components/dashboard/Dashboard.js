@@ -179,5 +179,5 @@ export default connect(
 
 
 
-export default connect(mapStateToProps, { logoutUser })(Dashboard);
+// export default connect(mapStateToProps, { logoutUser })(Dashboard);
 

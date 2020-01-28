@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import "./Landing.css"
 import Particles from 'react-particles-js';
 
 import { Link } from "react-router-dom";
@@ -148,7 +147,7 @@ class Landing extends Component {
               
             </Container>
           </div>
-          <Button className="btn-links float-right mt-3 mr-3" size="sm">
+          <Button className="btn-links float-right mt-3 mr-3 p-2" size="sm">
             <Link to="/creators" className="text">Meet The Team!</Link>
           </Button>
           
