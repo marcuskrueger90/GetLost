@@ -27,12 +27,12 @@
     background: 
     linear-gradient(
     to bottom,
-    rgba(0, 0, 0, .1) 0%,
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0.4) 65%,
-    rgba(0, 0, 0, .3) 100%
+    rgba(0, 0, 0, .2) 0%,
+    rgba(0, 0, 0, 0.3) 30%,
+    rgba(0, 0, 0, 0.5) 65%,
+    rgba(0, 0, 0, .4) 100%
     );
-    box-shadow: 1px 3px 8px 2px rgb(40,40,40);
+    box-shadow: 1px 3px 8px 2px rgb(10,10,10);
     padding-right: 100px;
 }
 
@@ -111,6 +111,14 @@
     max-width: 150px;
 }
 
+@media only screen and (max-width: 991px) {
+    .container {
+        max-width: 900px!important;
+    }
+    .car-padding {
+        left: 5%;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .welcome {

@@ -9,6 +9,16 @@
 
 }
 
+
 .user {
     margin-right: 1rem;
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+}
+
+.rdtOpen .rdtPicker {
+    width: 100%;
+    bottom: 40px;
+    max-width: 400px;
 }
