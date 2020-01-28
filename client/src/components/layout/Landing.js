@@ -55,10 +55,10 @@ class Landing extends Component {
          
           <div className="landing">
           
-            <Container className="welcome ">
+            <Container className="welcome">
               
               <Row style={{ position: 'relative', zIndex: 3 }}>
-                <Col lg={4} className="landing-bckgrnd">
+                <Col md={4} className="landing-bckgrnd">
                   <Card.Title className="card-title">
                   <img className="landing-logo" src={require('../../images/logo.svg')} alt="logo"></img>
                     <h1 className="title">Nomadic Security</h1>
@@ -92,7 +92,7 @@ class Landing extends Component {
                 </Col>
               
 
-                <Col sm={8} className="car-padding">
+                <Col xs={8} className="car-padding">
                 <Carousel>
                     <Carousel.Item>
                     <img
@@ -146,8 +146,11 @@ class Landing extends Component {
                 
               </Row>
               
-              </Container>
+            </Container>
           </div>
+          <Button className="btn-links float-right mt-3 mr-3" size="sm">
+            <Link to="/creators" className="text">Meet The Team!</Link>
+          </Button>
           
         </div>
 
