@@ -163,7 +163,7 @@ componentDidMount(){
             </Form.Group>
             </Form>
 
-            <Button onClick={this.submit} className="btn btn-warning">Submit</Button>
+            <Button onClick={this.submit} className="btn btn-warning mb-3">Submit</Button>
 
         </div>
       </Container>
