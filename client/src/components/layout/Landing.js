@@ -62,7 +62,7 @@ class Landing extends Component {
                   <Card.Title className="card-title">
                   <img className="landing-logo" src={require('../../images/logo.svg')} alt="logo"></img>
                     <h1 className="title">Nomadic Security</h1>
-                    <span className="h5 ">Travel Safely!</span>
+                    <span className="h5 travel-safely">Travel Safely!</span>
                   </Card.Title>
                 
                   <Card.Body className="card-content text-center">
@@ -93,7 +93,7 @@ class Landing extends Component {
               
 
                 <Col xs={8} className="car-padding">
-                <Carousel>
+                <Carousel className="mobile">
                     <Carousel.Item>
                     <img
                       className="d-block w-100 avatars"
