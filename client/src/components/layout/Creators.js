@@ -49,7 +49,7 @@ class Creators extends Component {
 
           <div className="background-mountain">
               <Container>
-                  <Row className="mt-5 text-center">
+                  <Row className="mt-5 text-center justify-content-around">
                   <Col lg={4}>
                     <div class="flip-card">
                     <div className="flip-card-inner backgrnd">
