@@ -5,7 +5,7 @@ import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
 import Particles from 'react-particles-js';
-// import moment from 'moment';
+import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import "./dash.css";
@@ -184,9 +184,8 @@ getTripData = ()=>{
         </Navbar>
         <Container className="pt-3 dash-container">
           <div className="card text-center">
-            <h4>Current Trip: </h4>
-            <h5>(Alarm Dispatch Location)</h5>
-            <h5>(Expected Arrival Time)</h5>
+            <h5>Planned trip to:</h5><p>{this.state.trip.address} {this.state.trip.city} {this.state.trip.state} {this.state.trip.zip}</p>
+            <h5>Scheduled return date/time:</h5><p>{moment(this.state.trip.tripEndDateTime, "YYYY-MM-DD HH:mm:ss.SZ").format("MM-DD-YYYY HH:mm A")}</p>
             
             <Button variant="danger"
               onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
@@ -227,8 +226,8 @@ getTripData = ()=>{
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
                   <option value="AR">Arkansas</option>
-                  <option value="AE">AE</option>
-                  <option value="AP">AP</option>
+                  <option value="AE">Armed Forces Europe (Military "State")</option>
+                  <option value="AP">Armed Forces Pacific (Military "State")</option>
                   <option value="CA">California</option>
                   <option value="CO">Colorado</option>
                   <option value="CT">Connecticut</option>
@@ -302,20 +301,6 @@ getTripData = ()=>{
             <Button onClick={this.submit} className="btn btn-links mb-3 submit">Submit</Button>
         </div>
       </Container>
-      {/* <Container className="tripInfo"> */}
-        <Row className="tripInfo text-center">
-            <Col>
-            <h2>You Have a Planned Trip to:</h2>
-              <p>{this.state.trip.address}</p>
-              <p>{this.state.trip.city}, {this.state.trip.state} {this.state.trip.zip} </p>
-            </Col>
-            <br />
-            <Col>
-            <h2>Your return date and time is:</h2>
-              <p>{this.state.trip.tripEndDateTime} </p>
-            </Col>
-        </Row>
-          {/* </Container> */}
           </div>
       </div>
     );
