@@ -77,7 +77,7 @@ class Creators extends Component {
                         <div className="flip-card-back">
                         <a href="https://github.com/HoveringTorso" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/github.svg')} alt="github"></img></a>
                         <br />
-                        <a href="https://www.linkedin.com/in/ian-applekamp-316256186/" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/linkedin.svg')} alt="linkedin"></img></a>
+                        <a href="https://lostinthewoods.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/linkedin.svg')} alt="linkedin"></img></a>
                         </div>
                      </div>
                      </div> 
