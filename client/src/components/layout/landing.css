@@ -20,6 +20,10 @@
 
 /* ---------- Background Images ^ ------------- */
 
+a:focus {
+    background: rgb(75, 87, 123);
+}
+
 .landing-bckgrnd {
     border-radius: 15px;
     height: 85vh;
@@ -95,6 +99,7 @@
 }
 
 .card-ul {
+    font-family: 'Questrial', sans-serif;
     font-size: 1.5rem;
     padding: 3px;
     font-style: italic;
