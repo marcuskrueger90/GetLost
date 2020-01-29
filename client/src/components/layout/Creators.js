@@ -134,7 +134,7 @@ class Creators extends Component {
                      </div> 
                     </Col>
                   </Row>
-                  <Button href="/" className="regBtn mt-5" block>
+                  <Button href="/" className="regBtn my-5" block>
                  Back to home
                 </Button>
               </Container>
