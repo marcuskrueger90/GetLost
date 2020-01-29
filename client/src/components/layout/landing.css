@@ -20,7 +20,7 @@
 
 /* ---------- Background Images ^ ------------- */
 
-a:focus, a:active, a:hover {
+a:focus, a:active {
     background: rgb(75, 87, 123)!important;
 }
 
@@ -37,7 +37,7 @@ a:focus, a:active, a:hover {
     rgba(0, 0, 0, .4) 100%
     );
     box-shadow: 1px 3px 8px 2px rgb(10,10,10);
-    padding-right: 100px;
+    /* padding-right: 100px; */
 }
 
 .landing-logo {
