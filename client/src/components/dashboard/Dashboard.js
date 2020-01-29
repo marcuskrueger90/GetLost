@@ -179,8 +179,6 @@ getTripData = ()=>{
               >
                 Logout
               </Button>
-              {/* <Nav.Link className="navItem" href="/register">Register</Nav.Link>
-      <Nav.Link className="navItem" href="/login">Log In</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -301,22 +299,23 @@ getTripData = ()=>{
                 />
               </Form.Group>
             </Form>
-            <Button onClick={this.submit} className="btn btn-links mb-3">Submit</Button>
+            <Button onClick={this.submit} className="btn btn-links mb-3 submit">Submit</Button>
         </div>
       </Container>
-      <Container>
-        <Row>
+      {/* <Container className="tripInfo"> */}
+        <Row className="tripInfo text-center">
             <Col>
             <h2>You Have a Planned Trip to:</h2>
               <p>{this.state.trip.address}</p>
               <p>{this.state.trip.city}, {this.state.trip.state} {this.state.trip.zip} </p>
             </Col>
+            <br />
             <Col>
             <h2>Your return date and time is:</h2>
               <p>{this.state.trip.tripEndDateTime} </p>
             </Col>
         </Row>
-          </Container>
+          {/* </Container> */}
           </div>
       </div>
     );

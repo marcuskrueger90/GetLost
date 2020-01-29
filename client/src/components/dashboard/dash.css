@@ -81,3 +81,15 @@
     bottom: 40px;
     max-width: 400px;
 }
+
+.submit {
+    background-color: #2b5a2b;
+}
+
+.tripInfo {
+    margin-top: 2rem;
+    width: 100%;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 2px 8px 1px rgb(10,10,10);
+}
