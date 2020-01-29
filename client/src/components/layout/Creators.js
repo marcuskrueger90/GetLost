@@ -49,9 +49,9 @@ class Creators extends Component {
 
           <div className="background-mountain">
               <Container>
-                  <Row className="mt-5 text-center justify-content-around">
+                  <Row className="mt-5 text-center justify-content-aroundf">
                   <Col lg={4}>
-                    <div class="flip-card">
+                    <div className="flip-card">
                     <div className="flip-card-inner backgrnd">
                      <Card className="">
                      <div className="flip-card-front">
@@ -107,14 +107,14 @@ class Creators extends Component {
 
                   <Row className="mt-3 justify-content-around text-center">
                   <Col lg={4}>
-                    <div class="flip-card">
+                    <div className="flip-card">
                     <div className="flip-card-inner backgrnd">
                      <Card className="">
-                     <div class="flip-card-front">
+                     <div className="flip-card-front">
                      <img className="avatar" src={require('../../images/jensey.svg')} alt="Jensey Fifer"></img>
                         <h3 className="name">Jensey Fifer</h3>
                         </div>
-                        <div class="flip-card-back">
+                        <div className="flip-card-back">
                         
                         <a href="https://github.com/seyleigh" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/github.svg')} alt="github"></img></a>
                         <br />
@@ -126,14 +126,14 @@ class Creators extends Component {
                     </Col>
 
                     <Col lg={4}>
-                    <div class="flip-card">
+                    <div className="flip-card">
                         <div className="flip-card-inner backgrnd">
                      <Card className="">
-                     <div class="flip-card-front">
+                     <div className="flip-card-front">
                      <img className="avatar" src={require('../../images/justin.svg')} alt="Justin Carlson"></img>
                         <h3 className="name">Justin Carlson</h3>
                         </div>
-                        <div class="flip-card-back">
+                        <div className="flip-card-back">
                         <a href="https://github.com/justincarlson7" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/github.svg')} alt="github"></img></a>
                         <br />
                         <a href="https://www.linkedin.com/in/justin-carlson-03797432/" target="_blank" rel="noopener noreferrer"><img className="icon" src={require('../../images/linkedin.svg')} alt="linkedin"></img></a>
