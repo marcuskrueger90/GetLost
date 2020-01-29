@@ -80,7 +80,6 @@
 
 .carousel-caption {
     font-family: 'Questrial', sans-serif;
-    /* margin-top: 10rem; */
     left: -1%!important;
     position: relative!important;
 }
@@ -109,12 +108,61 @@
     max-width: 150px;
 }
 
+.team-btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    .card-ul {
+        font-size: 1.4rem;
+        padding: 1px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .container {
-        max-width: 800px!important;
+        max-width: 850px!important;
     }
     .car-padding {
-        left: 5%;
+        left: 4%;
+    }
+    .btn-lg {
+        font-size: 1rem!important;
+        line-height: 1.5;
+    }
+    .card-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    } 
+    .title {
+        font-size: 1.7rem;
+    }
+    .travel-safely {
+        font-size: 1rem!important;
+    }
+    .carousel-inner {
+        padding-top: 0;
+    }
+    .landing-bckgrnd {
+        height: 80vh;
+    }
+    .avatars {
+        max-width: 100px;
+    }
+    .team-btn {
+        margin-top: 45px;
+        margin-right: 25px;
+    }
+    .card-ul {
+        padding: 0px;
+        font-size: 1.2rem;
+    }
+    .landing-links {
+        padding-top: 50px;
     }
 }
 
@@ -122,90 +170,135 @@
     .container {
         max-width: 700px!important;
     }
-    .btn-lg {
-        padding: .25rem .5rem!important;
-        font-size: .875rem!important;
-        line-height: 1.5;
-    }
     .card-ul {
         font-size: 1.2rem;
     }
     .carousel-inner {
         padding-top: 0px;
     }
+    .landing-bckgrnd {
+        height: 75vh;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .container {
-        max-width: 80%;
+        max-width: 96%!important;
     }
     .landing-bckgrnd {
         background: 
         linear-gradient(
         to bottom,
-        rgba(0, 0, 0, .1) 0%,
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0.4) 70%,
-        rgba(0, 0, 0, .3) 100%
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.6) 70%,
+        rgba(0, 0, 0, .5) 100%
         );
-        height: 91vh;
+        box-shadow: .5px 2px 7px 2px rgb(0,0,0);
+        height: 88vh;
     }
     .welcome {
         padding-top: 1rem;
-    }
-    .card-title {
-        padding-top: 10px;
-    }
-    .landing-links {
-        padding-top: 0px;
     }
     .card-body {
         padding: 0px!important;
     }
     .card-title {
-        text-align: initial;
+        padding-top: 10px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
     .travel-safely {
-        padding-left: 175px;
+        padding-left: 170px;
         margin-top: -55px;
-        /* overflow: wrap; */
+        overflow: wrap;
     }
     .title {
+        font-size: 2.5rem;
         padding-top: 20px;
     }
     .card-ul {
+        padding-left: 10px;
         font-size: 1rem;
         float: left;
         align-items: center;
     }
     .landing-links {
         justify-content: center;
-        padding-left: 50px;
-        padding-top: 50px;
-    }
-    .mobile {
-        margin-top: 20px;
+        padding-left: 180px;
+        padding-top: 20px;
     }
     .col-8 {
         position: fixed!important;
-        left: 90px;
+        left: 80px;
         right: 20px;
         top: 320px;
     }
-
+    .team-btn {
+        margin-top: 20px;
+        margin-right: 35px;
+    }
+    .carousel-inner {
+        width: 115%!important;
+    }
+    .carousel-indicators {
+        margin-right: 0px!important;
+    }
+    .btn-lg {
+        padding: .25rem .5rem!important;
+        font-size: .875rem!important;
+        line-height: 1.5;
+    }
 }
 
-/* @media only screen and (max-width: 600px) {
-    .welcome {
-        padding-top: 7em;
+@media only screen and (max-width: 415px) {
+    .avatars {
+        max-width: 60px;
     }
-
-    .landing-img {
-        height: 100vh;
-        width: 100%;
+    .carousel-caption, .carousel-caption h5 {
+        font-size: .8rem; 
     }
+    .col-8 {
+        position: fixed!important;
+        left: 61px;
+        top: 460px;
+    }
+    .travel-safely {
+        text-align: center;
+        padding-left: 20px;
+        margin-top: 1px;
+    }
+    .landing-logo {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+    .card-ul {
+        margin-left: 100px;
+    }
+    .landing-links {
+        justify-content: space-evenly;
+        padding-left: 50px;
+        padding-top: 5px;
+        padding-right: 50px;
+    }
+    .card-title {
+        padding-bottom: 10px;
+    }
+    
+}
 
-} */
+@media only screen and (max-width: 375px) {
+    .card-ul {
+        margin-left: 80px;
+    }
+    .col-8 {
+        left: 52px;
+    }
+    .travel-safely {
+        padding-left: 15px;
+    }
+}

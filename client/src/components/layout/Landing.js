@@ -92,7 +92,7 @@ class Landing extends Component {
               
 
                 <Col xs={8} className="car-padding">
-                <Carousel className="mobile">
+                <Carousel>
                     <Carousel.Item>
                     <img
                       className="d-block w-100 avatars"
@@ -147,7 +147,7 @@ class Landing extends Component {
               
             </Container>
           </div>
-          <Button className="btn-links float-right mt-3 mr-3 p-2" size="sm">
+          <Button className="btn-links float-right team-btn " size="sm">
             <Link to="/creators" className="text">Meet The Team!</Link>
           </Button>
           
