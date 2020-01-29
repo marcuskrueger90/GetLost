@@ -255,7 +255,7 @@
     }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 493px) {
     .avatars {
         max-width: 60px;
     }
@@ -264,41 +264,62 @@
     }
     .col-8 {
         position: fixed!important;
-        left: 61px;
-        top: 460px;
+        left: 65px;
+        top: 310px;
     }
     .travel-safely {
         text-align: center;
-        padding-left: 20px;
-        margin-top: 1px;
+        padding-left: 160px;
+        margin-top: -55px;
     }
     .landing-logo {
+        max-width: 120px;
         margin-top: 5px;
         margin-bottom: 0px;
     }
-    .card-ul {
-        margin-left: 100px;
-    }
     .landing-links {
         justify-content: space-evenly;
-        padding-left: 50px;
+        padding-left: 75px;
         padding-top: 5px;
-        padding-right: 50px;
     }
     .card-title {
         padding-bottom: 10px;
     }
+    .title {
+        padding-top: 10px;
+        font-size: 1.7rem;
+    }
+    .landing-bckgrnd {
+        height: 65vh;
+    }
     
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 384px) {
+    .landing-bckgrnd {
+        height: 74vh;
+    }
+    .landing-logo {
+        max-width: 32%;
+    }
     .card-ul {
         margin-left: 80px;
     }
     .col-8 {
         left: 52px;
+        top: 340px;
     }
     .travel-safely {
-        padding-left: 15px;
+        padding-left: 120px;
+        margin-top: -45px;
+    }
+    .title {
+        padding-top: 10px;
+        font-size: 1.5rem;
+    }
+    .landing-links {
+        padding-left: 55px;
+        padding-top: 10px;
+        padding-right: 50px;
     }
 }
