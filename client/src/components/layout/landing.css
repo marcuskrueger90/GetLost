@@ -7,6 +7,7 @@
     width: 100vw;
     z-index: 1;
 }
+
 .background-mountain {
     position: fixed;
     top: .2px;
@@ -18,109 +19,11 @@
     z-index: 2;
 }
 
-/* ---------- Background Images ^ ------------- */
-
-.landing-bckgrnd {
-    font-family: 'Questrial', sans-serif;
-    border-radius: 15px;
-    height: 85vh;
-    color: white;
-    background: 
-    linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, .1) 0%,
-    rgba(0, 0, 0, 0.2) 30%,
-    rgba(0, 0, 0, 0.4) 65%,
-    rgba(0, 0, 0, .3) 100%
-    );
-    box-shadow: 1px 3px 8px 2px rgb(40,40,40);
-    padding-right: 100px;
-}
-
-.landing-logo {
-    margin-top: 5px;
-    max-width: 125px;
-    margin-bottom: 15px;
-}
-
-.landing-links {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card-title {
-    border-bottom: 1px solid;
-    padding-bottom: 15px;
-    padding-top: 35px;
-    text-align: center;
-}
-
-.title {
-    font-family: 'Questrial', sans-serif;
-    text-align: center;
-} 
-
-.btn-links:hover {
-    background: rgb(75, 87, 123)!important;
-    transition: ease 0.6s;
-}
-.text {
-    text-decoration: none;
-    color: white;
-}
-.text:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.welcome {
-    padding-top: 3rem;
-}
-
-.carousel-caption {
-    font-family: 'Questrial', sans-serif;
-    /* margin-top: 10rem; */
-    left: -1%!important;
-    position: relative!important;
-}
-.car-padding {
-    left: 7%;
-}
-.carousel-inner {
-    padding-top: 25px;
-}
-
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    background-image: none!important;
-}
-
-.card-ul {
-    font-size: 1.5rem;
-    padding: 3px;
-    font-style: italic;
-    list-style: none;
-    font-weight: 900;
-}
-
-.avatars {
-    /* justify-content: center; */
-    /* align-items: center; */
-    padding-bottom: 15px;
-    margin: auto;
-    max-width: 150px;
-}
-
-
-@media only screen and (max-width: 600px) {
-    .welcome {
-        padding-top: 7em;
+/* @media only screen and (max-width: 1115px) {
+    .background-mountain {
+        background-size: 1120px;
     }
-
-    .landing-img {
-        height: 100vh;
-        width: 100%;
+    .background-sky {
+        background-size: 1120px;
     }
-
-}
+} */
