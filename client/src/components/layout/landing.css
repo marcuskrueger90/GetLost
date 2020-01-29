@@ -20,7 +20,7 @@
 
 /* ---------- Background Images ^ ------------- */
 
-a:focus a:active a:hover {
+a:focus, a:active, a:hover {
     background: rgb(75, 87, 123)!important;
 }
 

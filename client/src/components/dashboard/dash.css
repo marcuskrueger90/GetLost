@@ -1,4 +1,59 @@
+.dash-background-sky {
+    position: fixed;
+    background: url('../../images/sky.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+.dash-background-mountain {
+    position: fixed;
+    top: .2px;
+    background-image: url('../../images/ground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    overflow: scroll;
+}
+
+.nav-bckgrnd {
+    background: 
+    linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, .1) 0%,
+    rgba(0, 0, 0, 0.1) 30%,
+    rgba(0, 0, 0, 0.1) 65%,
+    rgba(0, 0, 0, .1) 100%
+    );
+    box-shadow: 1px .5px 8px 1px rgb(10,10,10);
+    margin-bottom: 5px;
+}
+
+.dash-p {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+}
+
+.dash-container {
+    background-color: transparent;
+}
+
 .card {
+    padding: 30px 50px 20px 50px;
+    background: 
+    linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, .1) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.3) 65%,
+    rgba(0, 0, 0, .3) 100%
+    );
+    box-shadow: 1px 2px 8px 1px rgb(10,10,10);
+    color: white;
     border: none;
 }
 
@@ -9,9 +64,12 @@
 
 }
 
-
 .user {
     margin-right: 1rem;
+}
+
+.logout:hover {
+    color: white;
 }
 
 .form-control:disabled, .form-control[readonly] {

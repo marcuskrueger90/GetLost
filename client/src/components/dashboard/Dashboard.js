@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Alert, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
+import Particles from 'react-particles-js';
 // import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
@@ -118,8 +119,43 @@ getTripData = ()=>{
     const { user } = this.props.auth;
 
     return (
-      <>
-        <Navbar expand="lg" bg="warning">
+      <div className="dash-background-sky">
+        <div className="dash-background-mountain">
+        <Particles className="dash-p"
+          params={{
+            "particles": {
+              "number": {
+                "value": 300,
+                  "density": {
+                    "enable": true,
+                    "value_area": 2500
+                  }
+                },
+                "line_linked": {
+                  "enable": true,
+                  "opacity": 0.02
+                },
+                "move": {
+                  "direction": "right",
+                  "speed": 0.08
+                },
+                "color": {
+                  "value": "#fff"
+                },
+                "size": {
+                  "value": 1.5
+                },
+                "opacity": {
+                  "anim": {
+                    "enable": true,
+                    "speed": .2,
+                    "opacity_min": 0.05
+                    }
+                }
+            },
+            "retina_detect": true
+        }} />
+        <Navbar expand="lg" className="nav-bckgrnd d-flex justify-space-between align-items-center">
           <img
             className="pic"
             src={require("../../images/logo.svg")}
@@ -127,7 +163,7 @@ getTripData = ()=>{
           />
           <Navbar.Brand href="/" className="brand">
             {" "}
-            Get Lost
+            Nomadic Security
           </Navbar.Brand>
           <Navbar.Toggle className="toggler" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav mr-auto">
@@ -139,7 +175,7 @@ getTripData = ()=>{
               <Button
                 variant="outline-light"
                 onClick={this.onLogoutClick}
-                className="btn logout"
+                className="btn btn-links logout"
               >
                 Logout
               </Button>
@@ -148,15 +184,15 @@ getTripData = ()=>{
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Container className="pt-3">
+        <Container className="pt-3 dash-container">
           <div className="card text-center">
             <h4>Current Trip: </h4>
             <h5>(Alarm Dispatch Location)</h5>
             <h5>(Expected Arrival Time)</h5>
             
             <Button variant="danger"
-onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
- </Button>
+              onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
+              </Button>
             <hr />
 
             <h4>New Alarm (Location and Time)</h4>
@@ -189,60 +225,59 @@ onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
                   <option value={null} disabled selected hidden required>
                     State
                   </option>
-                  <option value="AL">AL</option>
-                  <option value="AK">AK</option>
-                  <option value="AZ">AZ</option>
-                  <option value="AR">AR</option>
-                  <option value="AA">AA</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
                   <option value="AE">AE</option>
                   <option value="AP">AP</option>
-                  <option value="CA">CA</option>
-                  <option value="CO">CO</option>
-                  <option value="CT">CT</option>
-                  <option value="DE">DE</option>
-                  <option value="DC">DC</option>
-                  <option value="FL">FL</option>
-                  <option value="GA">GA</option>
-                  <option value="HI">HI</option>
-                  <option value="ID">ID</option>
-                  <option value="IL">IL</option>
-                  <option value="IN">IN</option>
-                  <option value="IA">IA</option>
-                  <option value="KS">KS</option>
-                  <option value="KY">KY</option>
-                  <option value="LA">LA</option>
-                  <option value="ME">ME</option>
-                  <option value="MD">MD</option>
-                  <option value="MA">MA</option>
-                  <option value="MI">MI</option>
-                  <option value="MN">MN</option>
-                  <option value="MS">MS</option>
-                  <option value="MO">MO</option>
-                  <option value="MT">MT</option>
-                  <option value="NE">NE</option>
-                  <option value="NV">NV</option>
-                  <option value="NH">NH</option>
-                  <option value="NJ">NJ</option>
-                  <option value="NM">NM</option>
-                  <option value="NY">NY</option>
-                  <option value="NC">NC</option>
-                  <option value="ND">ND</option>
-                  <option value="OH">OH</option>
-                  <option value="OK">OK</option>
-                  <option value="OR">OR</option>
-                  <option value="PA">PA</option>
-                  <option value="RI">RI</option>
-                  <option value="SC">SC</option>
-                  <option value="SD">SD</option>
-                  <option value="TN">TN</option>
-                  <option value="TX">TX</option>
-                  <option value="UT">UT</option>
-                  <option value="VT">VT</option>
-                  <option value="VA">VA</option>
-                  <option value="WA">WA</option>
-                  <option value="WV">WV</option>
-                  <option value="WI">WI</option>
-                  <option value="WY">WY</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">District of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
                 </Form.Control>
               </Form.Group>
 
@@ -266,7 +301,7 @@ onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
                 />
               </Form.Group>
             </Form>
-            <Button onClick={this.submit} className="btn btn-warning mb-3">Submit</Button>
+            <Button onClick={this.submit} className="btn btn-links mb-3">Submit</Button>
         </div>
       </Container>
       <Container>
@@ -281,8 +316,9 @@ onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
               <p>{this.state.trip.tripEndDateTime} </p>
             </Col>
         </Row>
-      </Container>
-      </>
+          </Container>
+          </div>
+      </div>
     );
   }
 }
