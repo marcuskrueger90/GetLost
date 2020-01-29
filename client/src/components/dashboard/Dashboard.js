@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container, Alert, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
+import { Button, Container, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
 import Particles from 'react-particles-js';
 import moment from 'moment';
 import Datetime from "react-datetime";
@@ -179,8 +179,6 @@ getTripData = ()=>{
               >
                 Logout
               </Button>
-              {/* <Nav.Link className="navItem" href="/register">Register</Nav.Link>
-      <Nav.Link className="navItem" href="/login">Log In</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -300,7 +298,7 @@ getTripData = ()=>{
                 />
               </Form.Group>
             </Form>
-            <Button onClick={this.submit} className="btn btn-links mb-3">Submit</Button>
+            <Button onClick={this.submit} className="btn btn-links mb-3 submit">Submit</Button>
         </div>
       </Container>
           </div>
