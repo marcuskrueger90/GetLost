@@ -20,8 +20,8 @@
 
 /* ---------- Background Images ^ ------------- */
 
-a:focus {
-    background: rgb(75, 87, 123);
+a:focus a:active a:hover {
+    background: rgb(75, 87, 123)!important;
 }
 
 .landing-bckgrnd {
@@ -305,10 +305,15 @@ a:focus {
         height: 74vh;
     }
     .landing-logo {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        vertical-align: baseline;
         max-width: 32%;
     }
     .card-ul {
-        margin-left: 80px;
+        margin-left: 90px;
     }
     .col-8 {
         left: 52px;
@@ -326,5 +331,10 @@ a:focus {
         padding-left: 55px;
         padding-top: 10px;
         padding-right: 50px;
+    }
+    svg {
+        padding: 0px;
+        margin:0px;
+        vertical-align: baseline;
     }
 }

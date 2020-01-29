@@ -80,10 +80,10 @@ class Landing extends Component {
                       </li>
                     </ul>
                     <Row className="landing-links">
-                      <Button className="btn-links" size="lg">
+                      <Button className="btn-links" size="lg" variant="outline-dark">
                         <Link to="/register" className="text">Sign Up!</Link>
                       </Button>
-                      <Button className="btn-links" size="lg">
+                      <Button className="btn-links" size="lg" variant="outline-dark">
                         <Link to="/login" className="text">Login!</Link>
                       </Button>
                     </Row>
@@ -147,7 +147,7 @@ class Landing extends Component {
               
             </Container>
           </div>
-          <Button className="btn-links float-right team-btn " size="sm">
+          <Button className="btn-links float-right team-btn " size="sm" variant="outline-dark">
             <Link to="/creators" className="text">Meet The Team!</Link>
           </Button>
           
