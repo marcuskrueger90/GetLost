@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container, Alert, Form, Navbar, Nav } from "react-bootstrap";
+import { Button, Container, Alert, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
 // import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
@@ -23,8 +23,26 @@ class Dashboard extends Component {
     city: "",
     state: "",
     zip: "",
-    tripEndDateTime: ""
+    tripEndDateTime: "",
+    trip:[]
   };
+
+
+getTripData = ()=>{
+  axios({
+    url: `/api/users/trips/${this.state.userid}`,
+    method: "GET",
+  })
+    .then((response) => {
+      const tripData = response.data;
+      this.setState({trip: tripData})
+      
+    })
+    .catch(() => {
+      console.log("Internal server error");
+    });
+};
+
 
   handleDateTimePicker = (moment, name) => this.setState({ [name]: moment.toDate() });
 
@@ -55,7 +73,7 @@ class Dashboard extends Component {
       data: payload
     })
       .then(() => {
-        console.log("Data has been sent to the server");
+      
       })
       .catch(() => {
         console.log("Internal server error");
@@ -89,7 +107,8 @@ class Dashboard extends Component {
 
 
   componentDidMount() {
-    this.setState({ userid: this.props.auth.user.id });
+    this.setState({ userid: this.props.auth.user.id },()=>{
+      this.getTripData()});
   }
   render() {
     const { user } = this.props.auth;
@@ -245,6 +264,19 @@ onClick={this.cancel} className="btn btn-lg logout">Arrived Safe - Cancel Alarm
             </Form>
             <Button onClick={this.submit} className="btn btn-warning mb-3">Submit</Button>
         </div>
+      </Container>
+      <Container>
+        <Row>
+            <Col>
+            <h2>You Have a Planned Trip to:</h2>
+              <p>{this.state.trip.address}</p>
+              <p>{this.state.trip.city}, {this.state.trip.state} {this.state.trip.zip} </p>
+            </Col>
+            <Col>
+            <h2>Your return date and time is:</h2>
+              <p>{this.state.trip.tripEndDateTime} </p>
+            </Col>
+        </Row>
       </Container>
       </>
     );
