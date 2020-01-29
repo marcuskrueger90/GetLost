@@ -182,7 +182,7 @@ getTripData = ()=>{
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Container className="pt-3 dash-container">
+        <Container className="pt-3 dash-container mb-5">
           <div className="card text-center">
             <h5>Planned trip to:</h5><p>{this.state.trip.address} {this.state.trip.city} {this.state.trip.state} {this.state.trip.zip}</p>
             <h5>Scheduled return date/time:</h5><p>{moment(this.state.trip.tripEndDateTime, "YYYY-MM-DD HH:mm:ss.SZ").format("MM-DD-YYYY HH:mm A")}</p>
@@ -288,7 +288,7 @@ getTripData = ()=>{
                 />
               </Form.Group>
 
-              <Form.Group className="px-1">
+              <Form.Group className="px-1 text-dark">
                 <Datetime
                   type="arrival"
                   name="tripEndDateTime"

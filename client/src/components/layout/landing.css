@@ -20,9 +20,6 @@
 
 /* ---------- Background Images ^ ------------- */
 
-a:focus, a:active {
-    background: rgb(75, 87, 123)!important;
-}
 
 .landing-bckgrnd {
     border-radius: 15px;
