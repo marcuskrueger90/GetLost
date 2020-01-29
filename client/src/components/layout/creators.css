@@ -89,11 +89,12 @@
   }
 
   .icon {
-      padding-top: 3rem;
-      height: 130px;
+      margin-top: 2.2rem;
+      height: 100px;
       color: white;
   }
 
   .icon:hover {
-    height: 140px;
+    margin-top: 1.6rem;
+    height: 110px;
 }
