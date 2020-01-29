@@ -78,6 +78,8 @@ getTripData = ()=>{
       .catch(() => {
         console.log("Internal server error");
       });
+
+      this.getTripData();
   };
 
 
@@ -103,6 +105,8 @@ getTripData = ()=>{
       .catch(() => {
         console.log("Internal server error");
       });
+
+      this.getTripData();
     };
 
 
