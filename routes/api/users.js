@@ -108,6 +108,26 @@ router.post("/login", (req, res) => {
     });
   });
 });
+router.get('/trips/:id', (req, res)=>{
+  
+  const data = req.body;
+  console.log(req.params.id , 'userid')
+
+  User.findOne({"_id": req.params.id }, (error, data)=>{
+  if(error){
+    res.status(500).json({msg: 'Sorry, internal server error'})
+
+  }else{
+    res.json(data);
+  }
+  
+  
+ 
+})
+})
+
+
+
 
 router.post('/trips/:id', (req, res)=>{
   
