@@ -19,6 +19,8 @@
 * Passport
 * React Bootstrap
 * Json Web Tokens
+* Noonlight
+
 ---
 ## [Live app on Heroku](https://lostinthewoods.herokuapp.com/)
 
