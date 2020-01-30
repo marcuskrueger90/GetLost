@@ -165,7 +165,7 @@ getTripData = ()=>{
             {" "}
             Nomadic Security
           </Navbar.Brand>
-          <Navbar.Toggle className="toggler" aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle className="toggler justify-content-end" style={{ width: "100%" }} aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav mr-auto">
             <Nav className="ml-auto">
               <Navbar.Text className="user">
