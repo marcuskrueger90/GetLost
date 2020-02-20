@@ -51,7 +51,7 @@ class Creators extends Component {
 
               <Container>
                   <Row className="mt-5 text-center justify-content-around">
-                  <Col lg={4} className="mb-3">
+                  <Col lg={4} md={5} className="mb-3 creator">
                     <div className="flip-card">
                     <div className="flip-card-inner">
                      <div className="flip-card-front backgrnd">
@@ -67,7 +67,7 @@ class Creators extends Component {
                      </div> 
                     </Col>
 
-                    <Col lg={4} className="mb-3">
+                    <Col lg={4} md={5} className="mb-3 creator">
                     <div className="flip-card">
                     <div className="flip-card-inner">
                      <div className="flip-card-front backgrnd">
@@ -83,7 +83,7 @@ class Creators extends Component {
                      </div> 
                     </Col>
 
-                    <Col lg={4} className="mb-3">
+                    <Col lg={4} md={5} className="mb-3 creator Ian">
                     <div className="flip-card">
                     <div className="flip-card-inner">
                      <div className="flip-card-front backgrnd">
@@ -101,7 +101,7 @@ class Creators extends Component {
                   </Row>
 
                   <Row className="mt-3 justify-content-around text-center">
-                  <Col lg={4} className="mb-3">
+                  <Col lg={4} md={5} className="mb-3 creator Jens">
                     <div className="flip-card">
                     <div className="flip-card-inner">
                      <div className="flip-card-front backgrnd">
@@ -118,7 +118,7 @@ class Creators extends Component {
                      </div> 
                     </Col>
 
-                    <Col lg={4} className="mb-3">
+                    <Col lg={4} md={5} className="mb-3 creator">
                     <div className="flip-card">
                         <div className="flip-card-inner">
                      <div className="flip-card-front backgrnd">

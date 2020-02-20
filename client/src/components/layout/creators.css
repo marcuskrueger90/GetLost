@@ -58,17 +58,11 @@
   }
   
   .flip-card-back {
-    /* background: linear-gradient(146deg, rgba(127,127,213,1) 0%, rgba(145,234,228,1) 100%)!important; */
     background: rgba(0, 0, 0, 0.4)!important;
     color: white;
     transform: rotateY(180deg);
   }
 
-  /* .fa-github-square, .fa-linkedin {
-      padding-top: 3rem;
-      font-size: 5rem;
-      color: white;
-  } */
 
   .fa-github-square:hover, .fa-linkedin:hover {
     color: #000000;
@@ -99,4 +93,27 @@
   .icon:hover {
     margin-top: 1.6rem;
     height: 110px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .Ian {
+    margin-top: 1rem;
+  }
+
+  .creator {
+    margin-right: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+
+  .creator {
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+  }
+
+  .Jens {
+    margin-top: .10rem;
+  }
 }
