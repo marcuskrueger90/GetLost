@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { Particles } from 'react-particles-js';
+import Stars from "../particles/particles"
 import { Card, Form, Button } from "react-bootstrap";
 import "./login.css"
 
@@ -59,40 +59,7 @@ class Login extends Component {
     return (
       <>
       <div className="background-sky">
-        <Particles
-            params={{
-              "particles": {
-                  "number": {
-                      "value": 300,
-                      "density": {
-                          "enable": true,
-                          "value_area": 1500
-                      }
-                  },
-                  "line_linked": {
-                      "enable": true,
-                      "opacity": 0.02
-                  },
-                  "move": {
-                      "direction": "right",
-                      "speed": 0.08
-                },
-                "color": {
-                    "value": "#fff"
-                },
-                  "size": {
-                      "value": 1.5
-                  },
-                  "opacity": {
-                      "anim": {
-                          "enable": true,
-                          "speed": .2,
-                          "opacity_min": 0.05
-                      }
-                  }
-              },
-              "retina_detect": true
-          }} />
+        <Stars />
           </div>
           <div className="background-mountain">
 
