@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Form, Navbar, Nav } from "react-bootstrap";
-import { Particles } from 'react-particles-js';
+import Stars from "../particles/particles"
 import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
@@ -121,40 +121,7 @@ getTripData = ()=>{
     return (
       <div className="dash-background-sky">
         <div className="dash-background-mountain">
-        <Particles className="dash-p"
-          params={{
-            "particles": {
-              "number": {
-                "value": 300,
-                  "density": {
-                    "enable": true,
-                    "value_area": 2500
-                  }
-                },
-                "line_linked": {
-                  "enable": true,
-                  "opacity": 0.02
-                },
-                "move": {
-                  "direction": "right",
-                  "speed": 0.08
-                },
-                "color": {
-                  "value": "#fff"
-                },
-                "size": {
-                  "value": 1.5
-                },
-                "opacity": {
-                  "anim": {
-                    "enable": true,
-                    "speed": .2,
-                    "opacity_min": 0.05
-                    }
-                }
-            },
-            "retina_detect": true
-        }} />
+        <Stars className="dash-p" />
         <Navbar expand="lg" className="nav-bckgrnd d-flex justify-space-between align-items-center">
           <img
             className="pic"
