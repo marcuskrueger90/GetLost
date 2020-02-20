@@ -96,7 +96,7 @@ class Login extends Component {
           </div>
           <div className="background-mountain">
 
-          <Card className="text-center bckgrnd w-50 mx-auto mt-4 regg">
+          <Card className="text-center bckgrnd mx-auto logform">
               <h4>
                 Log in below
               </h4>
@@ -104,7 +104,7 @@ class Login extends Component {
               Don't have an account? <Link to="/register">Register</Link>
               </p>
               </Card>
-            <Card className="bckgrnd w-50 mx-auto mt-4 regg">
+            <Card className="bckgrnd mx-auto mt-4 logform">
             <Form className="text-center mx-2 mt-2" noValidate onSubmit={this.onSubmit}>
 
             <Form.Group className="">
@@ -143,7 +143,7 @@ class Login extends Component {
                  </span>
               </Form.Group>
 
-              <div className="col s12">
+              <div className="">
                 <Button
                   block
                   style={{color: "white"}}

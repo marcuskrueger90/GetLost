@@ -97,7 +97,7 @@ class Register extends Component {
           }} />
           </div>
           <div className="background-mountain">
-            <Card className="text-center bckgrnd w-50 mx-auto mt-4 regg">
+            <Card className="text-center bckgrnd mx-auto regg">
               <h4>
                 Register below
               </h4>
@@ -105,8 +105,8 @@ class Register extends Component {
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
               </Card>
-              <Card className="bckgrnd w-50 mx-auto mt-4 regg">
-            <Form className="text-center mx-2 mt-3" noValidate onSubmit={this.onSubmit}>
+              <Card className="bckgrnd mx-auto regg">
+            <Form className="text-center mx-2" noValidate onSubmit={this.onSubmit}>
 
               <Form.Group className="mb-0">
               <Form.Control placeholder="Name"

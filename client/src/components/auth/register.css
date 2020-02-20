@@ -33,12 +33,29 @@
 }
 
 .regg {
+    width: 50%;
+    margin-top: 2rem;
     padding-top: 1rem;
     color: white;
     /* -webkit-box-shadow: 1px 1px 7px 4px rgba(0,0,0,0.56); */
     /* -moz-box-shadow: 1px 1px 7px 4px rgba(0,0,0,0.56); */
     box-shadow: 1px 1px 7px 4px rgba(0,0,0,0.56);
 
+}
+
+@media only screen and (max-width: 768px) {
+    .regg {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 414px) {
+    .regg {
+        margin-top: 2rem;
+        width: 100%;
+    }
 }
 
 
