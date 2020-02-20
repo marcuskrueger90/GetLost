@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import Particles from 'react-particles-js';
+import { Particles } from 'react-particles-js';
 import "./register.css"
 import { Card, Form, Button} from "react-bootstrap";
 

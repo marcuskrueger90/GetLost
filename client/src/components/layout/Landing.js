@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Particles from 'react-particles-js';
-
+import { Particles } from 'react-particles-js';
 import { Link } from "react-router-dom";
 import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
-// import { Popper } from 'react-popper';
 import "./landing.css";
 
 
@@ -159,31 +157,3 @@ class Landing extends Component {
 }
 
 export default Landing;
-
-
-
-
-  /* <div className="">
-              <Link to="/register"className="">Register</Link>
-            </div>
-            <div className="">
-              <Link to="/login" className="">Log In</Link>
-    </div> */
-
-
-
-
-      // <div className="landing">
-      // <Container className="welcome" sm={12}>
-      // <Card style={{position: 'relative', zIndex:3}} sm={12}>
-      // <Card.Body className="card-content">
-      //   This is some text within a card body. 
-      //   <br/>
-      //   <Link to="/register"className="">Plan trip (if logged in)</Link>
-      //   <br/>
-      //   <Link to="/login" className="">Log In</Link>
-
-      // </Card.Body>
-      // </Card>
-      // </Container>
-      // </div>
