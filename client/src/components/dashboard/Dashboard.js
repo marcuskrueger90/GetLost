@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Container, Form, Navbar, Nav, Row, Col } from "react-bootstrap";
-import Particles from 'react-particles-js';
+import { Button, Container, Form, Navbar, Nav } from "react-bootstrap";
+import { Particles } from 'react-particles-js';
 import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
@@ -320,9 +320,3 @@ export default connect(
   mapStateToProps,
   { logoutUser }
 )(Dashboard);
-
-
-
-
-// export default connect(mapStateToProps, { logoutUser })(Dashboard);
-
