@@ -18,7 +18,8 @@ class Register extends Component {
       telephone: "",
       password: "",
       password2: "",
-      errors: {}
+      errors: {},
+      externalData: null
     };
   }
 
@@ -29,11 +30,12 @@ class Register extends Component {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps(nextProps, nextState) {
     if (nextProps.errors) {
-      this.setState({
-        errors: nextProps.errors
-      });
+      return {
+        errors: nextProps.errors,
+        externalData: null
+      }
     }
   }
 
