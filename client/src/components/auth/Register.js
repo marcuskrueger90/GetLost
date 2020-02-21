@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import Stars from "../particles/particles"
+// import Stars from "../particles/particles"
 import "./register.css"
 import { Card, Form, Button} from "react-bootstrap";
 
@@ -29,7 +29,7 @@ class Register extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors
@@ -61,7 +61,7 @@ class Register extends Component {
     return (
         <>
         <div className="background-sky">
-          <Stars />
+          {/* <Stars /> */}
           </div>
           <div className="background-mountain">
             <Card className="text-center bckgrnd mx-auto regg">
