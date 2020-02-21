@@ -10,10 +10,10 @@ class Stars extends Component{
                 params={{
                 "particles": {
                     "number": {
-                    "value": 300,
+                    "value": 135,
                         "density": {
-                        "enable": true,
-                        "value_area": 2500
+                        "enable": false,
+                        "value_area": 135
                         }
                     },
                     "line_linked": {

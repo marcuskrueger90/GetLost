@@ -120,8 +120,9 @@ getTripData = ()=>{
 
     return (
       <div className="dash-background-sky">
-        <div className="dash-background-mountain">
         <Stars className="dash-p" />
+        <div className="dash-background-mountain">
+        
         <Navbar expand="lg" className="nav-bckgrnd d-flex justify-space-between align-items-center">
           <img
             className="pic"
@@ -186,7 +187,7 @@ getTripData = ()=>{
                   name="state"
                   onChange={this.handleChange}
                 >
-                  <option value={null} disabled selected hidden required>
+                  <option value={null} disabled defaultValue hidden required>
                     State
                   </option>
                   <option value="AL">Alabama</option>
