@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container, Form, Navbar, Nav } from "react-bootstrap";
-import Stars from "../particles/particles"
+// import Stars from "../particles/particles"
 import moment from 'moment';
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
@@ -120,7 +120,7 @@ getTripData = ()=>{
 
     return (
       <div className="dash-background-sky">
-        <Stars className="dash-p" />
+        {/* <Stars className="dash-p" /> */}
         <div className="dash-background-mountain">
         
         <Navbar expand="lg" className="nav-bckgrnd d-flex justify-space-between align-items-center">
