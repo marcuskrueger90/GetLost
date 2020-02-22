@@ -298,6 +298,13 @@
 }
 
 @media only screen and (max-width: 384px) {
+    .background-mountain {
+        position: relative;
+    }
+    .background-sky {
+        position: relative;
+    }
+
     .landing-bckgrnd {
         height: 74vh;
     }
