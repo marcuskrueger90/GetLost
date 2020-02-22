@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Stars from "../particles/particles"
+// import Stars from "../particles/particles"
 import { Link } from "react-router-dom";
 import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import "./landing.css";
@@ -12,7 +12,7 @@ class Landing extends Component {
     return (
       <div>
         <div className="background-sky">
-        <Stars/>
+        {/* <Stars/> */}
         </div>
 
         <div className="background-mountain">
