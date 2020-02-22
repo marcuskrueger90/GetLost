@@ -15,7 +15,8 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
+      externalData: null
     };
   }
 
@@ -26,15 +27,16 @@ class Login extends Component {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps(nextProps, nextState) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      nextProps.history.push("/dashboard");
     }
 
     if (nextProps.errors) {
-      this.setState({
-        errors: nextProps.errors
-      });
+      return {
+        errors: nextProps.errors,
+        externalData: null
+      }
     }
   }
 
