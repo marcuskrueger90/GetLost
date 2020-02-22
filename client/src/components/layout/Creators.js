@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Stars from "../particles/particles"
+// import Stars from "../particles/particles"
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./creators.css"
 
@@ -11,7 +11,7 @@ class Creators extends Component {
         return (
             <>
             <div className="background-sky">
-                <Stars />
+                {/* <Stars /> */}
             </div>
 
             <div className="background-mountain">
